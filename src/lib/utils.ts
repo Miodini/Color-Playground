@@ -41,3 +41,16 @@ export const sumColors = (colors: string[]) => {
 
   return rgbToHex(Math.min(summedRgb.r, 0xFF), Math.min(summedRgb.g, 0xFF), Math.min(summedRgb.b, 0xFF))
 }
+
+export const subtractColors = (colors: string[]) => {
+  if (colors.length === 0) return "#000000"
+  const rgbs = colors.map(color => hexToRgb(color))
+
+  const subtractedRgb = rgbs.reduce((acc, rgb) => ({
+    r: acc.r - rgb.r,
+    g: acc.g - rgb.g,
+    b: acc.b - rgb.b,
+  }))
+
+  return rgbToHex(Math.max(subtractedRgb.r, 0), Math.max(subtractedRgb.g, 0), Math.max(subtractedRgb.b, 0))
+}

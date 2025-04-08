@@ -1,35 +1,34 @@
 'use client'
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Tabs, Tab } from "react-bootstrap"
-import { getRandomColor } from "@/lib/utils"
-import Blend from "@/components/blend"
-import Sum from "@/components/sum"
+import { ColorsProvider } from "@/components/Context"
+import Blend from "@/components/Blend"
+import Sum from "@/components/Sum"
+import Diff from "@/components/Diff"
 
-enum TabKeys { Blend = 'blend', Sum = 'sum' }
+enum TabKeys { Blend = 'blend', Sum = 'sum', Diff = 'diff' }
 
 export default function Home() {
-  const [colors, setColors] = useState<string[]>([])
   const [activeKey, setActiveKey] = useState<string>(TabKeys.Blend)	
 
-  useEffect(() => {
-    setColors([getRandomColor(), getRandomColor()])
-  }, [])
-
   return (
-    <>
+    <ColorsProvider>
       <Tabs
         activeKey={activeKey}
         onSelect={tab => setActiveKey(tab || TabKeys.Blend)}
         className="mb-3"
       >
         <Tab eventKey={TabKeys.Blend} title="Blend">
-          <Blend colors={colors} setColors={setColors} />
+          <Blend />
         </Tab>
         <Tab eventKey={TabKeys.Sum} title="Sum">
-          <Sum colors={colors} setColors={setColors} />
+          <Sum />
+        </Tab>
+        <Tab eventKey={TabKeys.Diff} title="Difference">
+          <Diff />
         </Tab>
       </Tabs>
-    </>
+    </ColorsProvider>
   )
 }
   
