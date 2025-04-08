@@ -8,13 +8,13 @@ const ColorsContext = createContext<ColorsContextType>({
   setColors: () => {}
 })
 
-export const useColors = () => {
+export function useColors() {
   const context = useContext(ColorsContext)
-  
+
   return context
 }
 
-export const ColorsProvider = ({ children }: { children: React.ReactNode }) => {
+export function ColorsProvider({ children }: { children: React.ReactNode }) {
   const [colors, setColors] = useState<string[]>([])
 
   useEffect(() => {

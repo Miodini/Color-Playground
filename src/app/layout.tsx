@@ -3,6 +3,7 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Card, CardHeader, CardBody } from 'react-bootstrap'
 import Container from "react-bootstrap/Container"
+import DarkModeToggle from '@/components/DarkModeToggle'
 
 export const metadata: Metadata = {
   title: "Color Playground",
@@ -17,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Container className="center mt-5">
+        <div className="toggle-container">
+          <DarkModeToggle />
+        </div>
+        <Container className="center h-100">
           <Card>
             <CardHeader className="text-center">
               <h1>Color Playground</h1>
