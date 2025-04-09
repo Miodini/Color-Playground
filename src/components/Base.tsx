@@ -1,5 +1,6 @@
-import { Row, Col, Form, Card } from "react-bootstrap"
-import { useColors } from "./Context"
+import React from 'react'
+import { Row, Col, Form, Card } from 'react-bootstrap'
+import { useColors } from './Context'
 
 type BaseProps = {
   colorFn: (colors: string[]) => string
@@ -8,7 +9,7 @@ type BaseProps = {
 export default function Base({ colorFn }: BaseProps) {
   const { colors, setColors } = useColors()
   const result = colorFn(colors)
-  const textColor = parseInt(result.slice(1), 16) >= 0x7FFFFF ? "#000" : "#fff"
+  const textColor = parseInt(result.slice(1), 16) >= 0x7FFFFF ? '#000' : '#fff'
 
   return (
     <Card.Body>

@@ -1,10 +1,10 @@
 'use client'
-import { useState } from "react"
-import { Tabs, Tab } from "react-bootstrap"
-import { ColorsProvider } from "@/components/Context"
-import Blend from "@/components/Blend"
-import Sum from "@/components/Sum"
-import Diff from "@/components/Diff"
+import React, { useState } from 'react'
+import { Tabs, Tab } from 'react-bootstrap'
+import { ColorsProvider } from '@/components/Context'
+import Blend from '@/components/Blend'
+import Sum from '@/components/Sum'
+import Diff from '@/components/Diff'
 
 enum TabKeys { Blend = 'blend', Sum = 'sum', Diff = 'diff' }
 

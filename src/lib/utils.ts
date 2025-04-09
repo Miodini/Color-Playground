@@ -16,7 +16,7 @@ export const getRandomColor = () => {
 }
 
 export const blendColors = (colors: string[]) => {
-  if (colors.length === 0) return "#000000"
+  if (colors.length === 0) return '#000000'
   const rgbs = colors.map(color => hexToRgb(color))
   const len = colors.length
 
@@ -30,7 +30,7 @@ export const blendColors = (colors: string[]) => {
 }
 
 export const sumColors = (colors: string[]) => {
-  if (colors.length === 0) return "#000000"
+  if (colors.length === 0) return '#000000'
   const rgbs = colors.map(color => hexToRgb(color))
 
   const summedRgb = rgbs.reduce((acc, rgb) => ({
@@ -43,7 +43,7 @@ export const sumColors = (colors: string[]) => {
 }
 
 export const subtractColors = (colors: string[]) => {
-  if (colors.length === 0) return "#000000"
+  if (colors.length === 0) return '#000000'
   const rgbs = colors.map(color => hexToRgb(color))
 
   const subtractedRgb = rgbs.reduce((acc, rgb) => ({

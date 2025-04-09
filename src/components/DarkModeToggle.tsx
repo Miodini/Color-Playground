@@ -1,6 +1,6 @@
 'use client'
+import React, { useLayoutEffect, useState } from 'react'
 import { Form } from 'react-bootstrap'
-import { useLayoutEffect, useState } from 'react'
 
 export default function DarkModeToggle() {
   const [ darkMode, setDarkMode ] = useState<boolean>(false)
