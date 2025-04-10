@@ -1,10 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './globals.css'
+import style from './main.module.css'
 import React from 'react'
 import type { Metadata } from 'next'
-import { Card, CardHeader, CardBody } from 'react-bootstrap'
-import Container from 'react-bootstrap/Container'
+import { Card, Container, CardHeader, CardBody } from 'react-bootstrap'
 import DarkModeToggle from '@/components/DarkModeToggle'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Color Playground',
@@ -19,10 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="toggle-container">
+        <div className={style.toggleContainer}>
           <DarkModeToggle />
         </div>
-        <Container className="center h-100">
+        <Container className={style.container}>
           <Card>
             <CardHeader className="text-center">
               <h1>Color Playground</h1>
@@ -32,6 +33,7 @@ export default function RootLayout({
             </CardBody>
           </Card>
         </Container>
+        <Footer />
       </body>
     </html>
   )

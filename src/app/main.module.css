@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--container-height);
+}
+.footer {
+  height: calc(100% - var(--container-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 5px
+}
+
+.toggleContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.githubIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}

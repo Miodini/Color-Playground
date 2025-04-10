@@ -1,3 +1,7 @@
+:root {
+    --container-height: 95%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -11,18 +15,11 @@ html[data-bs-theme="dark"] body{
     background-color: #121212;
 }
 
-.toggle-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-}
-
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 #dark-mode-switch {
     scale: 1.5;
     margin-right: 1rem;
