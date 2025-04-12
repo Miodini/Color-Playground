@@ -1,10 +1,13 @@
 {
-  "name": "azure-test-fe",
-  "version": "0.1.0",
-  "private": true,
+  "name": "color-playground",
+  "version": "1.0.0",
+  "repository": "https://github.com/Miodini/Color-Playground",
+  "author": "Lucas Mondini",
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "node src/preBuild.js && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -13,8 +16,7 @@
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
-    "react-dom": "^19.0.0",
-    "styled-components": "^6.1.17"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
