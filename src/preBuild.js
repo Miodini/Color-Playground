@@ -1,4 +1,4 @@
-import fs from 'fs'
+const fs = require('fs')
 
 const buildDate = new Date().toISOString().split('T')[0]
 
