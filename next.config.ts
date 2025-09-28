@@ -1,8 +1,8 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  assetPrefix: '/projects/color-playground/',
-  basePath: '/projects/color-playground',
+  assetPrefix: '/color-playground/',
+  basePath: '/color-playground',
   output: 'export'
 };
 
