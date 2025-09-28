@@ -21,9 +21,11 @@
   right: 20px;
 }
 
+.githubLink {
+  margin: 0 auto;
+}
+
 .githubIcon {
   width: 24px;
   height: 24px;
-  cursor: pointer;
-  margin: 0 auto;
 }
